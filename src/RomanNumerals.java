@@ -2,11 +2,11 @@
 public class RomanNumerals {
 
 	public String toRoman(int number)
-	
-	
+
+
 	{
 		String toRoman="";
-		
+
 		if(number>89)
 		{
 			while(number>=100)
@@ -32,41 +32,43 @@ public class RomanNumerals {
 				toRoman+="XL";
 				number-=40;
 			}
-		if(number>8)
-		{
-			while(number>=10)
+			if(number>8)
 			{
-				toRoman+="X";
-				number-=10;
+				while(number>=10)
+				{
+					toRoman+="X";
+					number-=10;
+				}
+				if(number==9)
+				{
+					toRoman+="IX";
+					number-=9;
+				}
 			}
-			if(number==9)
+			if(number>3)
 			{
-				toRoman+="IX";
-				number-=9;
-			}
-		}
-		if(number>3)
-		{
-			while(number>=5)
-			{
-				toRoman+="V";
-				number-=5;
-			}
-			if(number== 4)
-			{
-				toRoman+= "IV";
-				number-=4;
+				while(number>=5)
+				{
+					toRoman+="V";
+					number-=5;
+				}
+				if(number== 4)
+				{
+					toRoman+= "IV";
+					number-=4;
+				}
+
 			}
 
-		}
+			if (number <= 3)
+			{
+				for(int i=0;i<number;i++)
+					toRoman+= "I";
+			}
 		
-		if (number <= 3)
-		{
-			for(int i=0;i<number;i++)
-				toRoman+= "I";
+			
 		}
 		return toRoman;
-	
+		
 	}
-
 }
