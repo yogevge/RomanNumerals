@@ -6,6 +6,34 @@ public class RomanNumerals {
 
 	{
 		String toRoman="";
+		
+		
+		if(number>899)
+		{
+			while(number>=1000)
+			{
+				toRoman+="M";
+				number-=1000;
+			}
+			if(number>=900)
+			{
+				toRoman+="CM";
+				number-=900;
+			}
+		}
+		if(number>399)
+		{
+			while(number>=500)
+			{
+				toRoman+="D";
+				number-=500;
+			}
+			if(number>=400)
+			{
+				toRoman+="CD";
+				number-=400;
+			}
+		}
 
 		if(number>89)
 		{
