@@ -60,6 +60,7 @@ public class RomanNumerals {
 				toRoman+="XL";
 				number-=40;
 			}
+		}
 			if(number>8)
 			{
 				while(number>=10)
@@ -95,7 +96,7 @@ public class RomanNumerals {
 			}
 		
 			
-		}
+		
 		return toRoman;
 		
 	}
