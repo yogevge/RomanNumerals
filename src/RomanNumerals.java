@@ -41,10 +41,7 @@ public class RomanNumerals {
 				toRoman+= "I";
 		}
 		return toRoman;
-	}
-		if (nmber == 1)
-			return "I";
-		return "II";
+	
 	}
 
 }
