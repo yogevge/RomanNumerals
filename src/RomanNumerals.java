@@ -7,6 +7,31 @@ public class RomanNumerals {
 	{
 		String toRoman="";
 		
+		if(number>89)
+		{
+			while(number>=100)
+			{
+				toRoman+="C";
+				number-=100;
+			}
+			if(number>=90)
+			{
+				toRoman+="XC";
+				number-=90;
+			}
+		}
+		if(number>39)
+		{
+			while(number>=50)
+			{
+				toRoman+="L";
+				number-=50;
+			}
+			if(number>=40)
+			{
+				toRoman+="XL";
+				number-=40;
+			}
 		if(number>8)
 		{
 			while(number>=10)
