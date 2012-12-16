@@ -3,13 +3,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class RomanNumeralUnitTests 
-{
+public class RomanNumeralUnitTests {
 
 	private RomanNumerals number = new RomanNumerals();
 
 	@Test
-	public void return1to3Itests() 
+	public void return1to3Itests()
 	{
 		assertEquals("I", number.toRoman(1));
 		assertEquals("II", number.toRoman(2));
@@ -25,7 +24,6 @@ public class RomanNumeralUnitTests
 		assertEquals("VII", number.toRoman(7));
 		assertEquals("VIII", number.toRoman(8));
 	}
-
 	@Test
 	public void return9to39Xtests()
 	{
@@ -123,4 +121,90 @@ public class RomanNumeralUnitTests
 		assertEquals("LXXXIX",number.toRoman(89));
 
 	}
+
+	@Test
+	public void return90to190Ctests()
+	{
+
+		assertEquals("XC",number.toRoman(90));
+		assertEquals("XCI",number.toRoman(91));
+		assertEquals("XCII",number.toRoman(92));
+		assertEquals("XCIII",number.toRoman(93));
+		assertEquals("XCIV",number.toRoman(94));
+		assertEquals("XCV",number.toRoman(95));
+		assertEquals("XCVI",number.toRoman(96));
+		assertEquals("XCVII",number.toRoman(97));
+		assertEquals("XCVIII",number.toRoman(98));
+		assertEquals("XCIX",number.toRoman(99));
+		assertEquals("C",number.toRoman(100));
+
+		assertEquals("CXC",number.toRoman(190));
+	}
+	@Test
+	public void return400to499Dtests()
+	{
+		assertEquals("CD",number.toRoman(400));
+		assertEquals("CDXLII",number.toRoman(442));
+		assertEquals("CDXXXVII",number.toRoman(437));
+		assertEquals("CDLXXXVIII",number.toRoman(488));
+		assertEquals("CDLXXXIX",number.toRoman(489));
+		assertEquals("CDXCI",number.toRoman(491));
+		assertEquals("CDXCIX",number.toRoman(499));
+		assertEquals("CDXCIV",number.toRoman(494));
+
+	}
+	@Test
+	public void return500to890Dtests()
+	{
+		assertEquals("D",number.toRoman(500));
+		assertEquals("DI",number.toRoman(501));
+		assertEquals("DL",number.toRoman(550));
+		assertEquals("DXXX",number.toRoman(530));
+		assertEquals("DCCVII",number.toRoman(707));
+		assertEquals("DCCCXC",number.toRoman(890));
+
+	}
+
+	@Test
+	public void returnMoreThan900Mtests()
+	{
+		assertEquals("CM",number.toRoman(900));
+		assertEquals("CMXCVIII",number.toRoman(998));
+		assertEquals("MDCCXII",number.toRoman(1712));
+		assertEquals("MCMXC",number.toRoman(1990));
+		assertEquals("MCMXCI",number.toRoman(1991));
+		assertEquals("MCMXCII",number.toRoman(1992));
+		assertEquals("MCMXCIII",number.toRoman(1993));
+		assertEquals("MCMXCIV",number.toRoman(1994));
+		assertEquals("MCMXCV",number.toRoman(1995));
+		assertEquals("MCMXCVI",number.toRoman(1996));
+		assertEquals("MCMXCVII",number.toRoman(1997));
+		assertEquals("MCMXCVIII",number.toRoman(1998));
+		assertEquals("MCMXCIX",number.toRoman(1999));
+		assertEquals("MM",number.toRoman(2000));
+		assertEquals("MMI",number.toRoman(2001));
+		assertEquals("MMII",number.toRoman(2002));
+		assertEquals("MMIII",number.toRoman(2003));
+		assertEquals("MMIV",number.toRoman(2004));
+		assertEquals("MMV",number.toRoman(2005));
+		assertEquals("MMVI",number.toRoman(2006));
+		assertEquals("MMVII",number.toRoman(2007));
+		assertEquals("MMVIII",number.toRoman(2008));
+		assertEquals("MMIX",number.toRoman(2009));
+		assertEquals("MMX",number.toRoman(2010));
+		assertEquals("MMXI",number.toRoman(2011));
+		assertEquals("MMXII",number.toRoman(2012));
+		assertEquals("MMXIII",number.toRoman(2013));
+		assertEquals("MMXIV",number.toRoman(2014));
+		assertEquals("MMXV",number.toRoman(2015));
+		assertEquals("MMXVI",number.toRoman(2016));
+		assertEquals("MD",number.toRoman(1500));
+		assertEquals("MDCCC",number.toRoman(1800));
+		assertEquals("MMCMXCIX",number.toRoman(2999));
+		assertEquals("MMM",number.toRoman(3000));
+		assertEquals("MMCMXLIX",number.toRoman(2949));
+		assertEquals("MMDXLIX",number.toRoman(2549));
+		assertEquals("MMCDXLIX",number.toRoman(2449));
+	}
+
 }
